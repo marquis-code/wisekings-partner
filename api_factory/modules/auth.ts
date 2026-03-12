@@ -7,4 +7,8 @@ export const auth_api = {
     logout: () => GATEWAY_ENDPOINT.post('/auth/logout'),
     forgotPassword: (email: string) => GATEWAY_ENDPOINT.post('/auth/forgot-password', { email }),
     resetPassword: (payload: { token: string; newPassword: string }) => GATEWAY_ENDPOINT.post('/auth/reset-password', payload),
+    verifyOtp: (payload: { email: string; otpCode: string }) => GATEWAY_ENDPOINT.post('/auth/verify-otp', payload),
+    resendOtp: (payload: { email: string }) => GATEWAY_ENDPOINT.post('/auth/resend-otp', payload),
+    verifyLoginOtp: (payload: { email: string; otpCode: string }) => GATEWAY_ENDPOINT.post('/auth/verify-login-otp', payload),
+    socialLogin: (payload: { idToken: string }) => GATEWAY_ENDPOINT.post('/auth/social-login', payload),
 }

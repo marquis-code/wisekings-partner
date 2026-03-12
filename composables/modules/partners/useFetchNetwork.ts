@@ -4,7 +4,7 @@ import { useCustomToast } from "@/composables/core/useCustomToast"
 
 export const useFetchNetwork = () => {
     const loading = ref(false)
-    const network = ref<any[]>([])
+    const network = ref<any>(null)
     const total = ref(0)
     const { showToast } = useCustomToast()
 

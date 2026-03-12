@@ -14,7 +14,13 @@ type HydrationStrategies = {
 type LazyComponent<T> = DefineComponent<HydrationStrategies, {}, {}, {}, {}, {}, {}, { hydrated: () => void }> & T
 
 
-export const ToastContainer: typeof import("../components/ToastContainer.vue")['default']
+export const ChatWidget: typeof import("../components/chat/ChatWidget.vue")['default']
+export const CoreAnimatedInput: typeof import("../components/core/AnimatedInput.vue")['default']
+export const CoreConfirmModal: typeof import("../components/core/ConfirmModal.vue")['default']
+export const CorePasswordInput: typeof import("../components/core/PasswordInput.vue")['default']
+export const CorePhoneInput: typeof import("../components/core/PhoneInput.vue")['default']
+export const CoreSelectInput: typeof import("../components/core/SelectInput.vue")['default']
+export const CoreToast: typeof import("../components/core/Toast.vue")['default']
 export const NuxtWelcome: typeof import("../node_modules/nuxt/dist/app/components/welcome.vue")['default']
 export const NuxtLayout: typeof import("../node_modules/nuxt/dist/app/components/nuxt-layout")['default']
 export const NuxtErrorBoundary: typeof import("../node_modules/nuxt/dist/app/components/nuxt-error-boundary.vue")['default']
@@ -28,6 +34,8 @@ export const NuxtRouteAnnouncer: typeof import("../node_modules/nuxt/dist/app/co
 export const NuxtImg: typeof import("../node_modules/nuxt/dist/app/components/nuxt-stubs")['NuxtImg']
 export const NuxtPicture: typeof import("../node_modules/nuxt/dist/app/components/nuxt-stubs")['NuxtPicture']
 export const Icon: typeof import("../node_modules/@nuxt/icon/dist/runtime/components/index")['default']
+export const NuxtLinkLocale: typeof import("../node_modules/@nuxtjs/i18n/dist/runtime/components/NuxtLinkLocale")['default']
+export const SwitchLocalePathLink: typeof import("../node_modules/@nuxtjs/i18n/dist/runtime/components/SwitchLocalePathLink")['default']
 export const NuxtPage: typeof import("../node_modules/nuxt/dist/pages/runtime/page")['default']
 export const NoScript: typeof import("../node_modules/nuxt/dist/head/runtime/components")['NoScript']
 export const Link: typeof import("../node_modules/nuxt/dist/head/runtime/components")['Link']
@@ -39,7 +47,13 @@ export const Head: typeof import("../node_modules/nuxt/dist/head/runtime/compone
 export const Html: typeof import("../node_modules/nuxt/dist/head/runtime/components")['Html']
 export const Body: typeof import("../node_modules/nuxt/dist/head/runtime/components")['Body']
 export const NuxtIsland: typeof import("../node_modules/nuxt/dist/app/components/nuxt-island")['default']
-export const LazyToastContainer: LazyComponent<typeof import("../components/ToastContainer.vue")['default']>
+export const LazyChatWidget: LazyComponent<typeof import("../components/chat/ChatWidget.vue")['default']>
+export const LazyCoreAnimatedInput: LazyComponent<typeof import("../components/core/AnimatedInput.vue")['default']>
+export const LazyCoreConfirmModal: LazyComponent<typeof import("../components/core/ConfirmModal.vue")['default']>
+export const LazyCorePasswordInput: LazyComponent<typeof import("../components/core/PasswordInput.vue")['default']>
+export const LazyCorePhoneInput: LazyComponent<typeof import("../components/core/PhoneInput.vue")['default']>
+export const LazyCoreSelectInput: LazyComponent<typeof import("../components/core/SelectInput.vue")['default']>
+export const LazyCoreToast: LazyComponent<typeof import("../components/core/Toast.vue")['default']>
 export const LazyNuxtWelcome: LazyComponent<typeof import("../node_modules/nuxt/dist/app/components/welcome.vue")['default']>
 export const LazyNuxtLayout: LazyComponent<typeof import("../node_modules/nuxt/dist/app/components/nuxt-layout")['default']>
 export const LazyNuxtErrorBoundary: LazyComponent<typeof import("../node_modules/nuxt/dist/app/components/nuxt-error-boundary.vue")['default']>
@@ -53,6 +67,8 @@ export const LazyNuxtRouteAnnouncer: LazyComponent<typeof import("../node_module
 export const LazyNuxtImg: LazyComponent<typeof import("../node_modules/nuxt/dist/app/components/nuxt-stubs")['NuxtImg']>
 export const LazyNuxtPicture: LazyComponent<typeof import("../node_modules/nuxt/dist/app/components/nuxt-stubs")['NuxtPicture']>
 export const LazyIcon: LazyComponent<typeof import("../node_modules/@nuxt/icon/dist/runtime/components/index")['default']>
+export const LazyNuxtLinkLocale: LazyComponent<typeof import("../node_modules/@nuxtjs/i18n/dist/runtime/components/NuxtLinkLocale")['default']>
+export const LazySwitchLocalePathLink: LazyComponent<typeof import("../node_modules/@nuxtjs/i18n/dist/runtime/components/SwitchLocalePathLink")['default']>
 export const LazyNuxtPage: LazyComponent<typeof import("../node_modules/nuxt/dist/pages/runtime/page")['default']>
 export const LazyNoScript: LazyComponent<typeof import("../node_modules/nuxt/dist/head/runtime/components")['NoScript']>
 export const LazyLink: LazyComponent<typeof import("../node_modules/nuxt/dist/head/runtime/components")['Link']>

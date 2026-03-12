@@ -1,1 +1,7 @@
-<template><NuxtLayout><NuxtPage /></NuxtLayout><ToastContainer /></template>
+<template><NuxtLayout><NuxtPage /></NuxtLayout></template>
+
+<style>
+body {
+    font-family: 'Onest', sans-serif;
+}
+</style>

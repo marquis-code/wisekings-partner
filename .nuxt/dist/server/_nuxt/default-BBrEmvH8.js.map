@@ -1,1 +1,0 @@
-{"version":3,"file":"default-BBrEmvH8.js","sources":["../../../../layouts/default.vue"],"sourcesContent":["<template><div class=\"min-h-screen bg-dark-950\"><slot /></div></template>\n"],"names":["_ssrRenderAttrs","_mergeProps"],"mappings":";;;;;;;;;;;;;;;;;;;;;AAAe,QAAA,OAAAA,eAAAC,WAAA,EAAA,OAAM,8BAA0B,MAAA,CAAA,CAAA,GAAA;;;;;;;;;;;"}
