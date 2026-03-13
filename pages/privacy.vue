@@ -23,41 +23,41 @@
         </header>
 
         <section class="prose prose-slate max-w-none space-y-12 text-slate-600 leading-relaxed relative z-10">
-          <p class="text-lg font-medium text-slate-700">At WiseKings, we treat your business and financial data with the same gravity as we do our own inventory. This policy outlines how we collect, protect, and utilize your information as a partner.</p>
+          <p class="text-lg font-medium text-slate-700 leading-relaxed">At WiseKings, we treat your business and financial data with the same gravity as we do our own logistics. This policy outlines our stringent data collection, protection, and utilization protocols designed to safeguard your interests as a partner.</p>
 
           <div>
-             <h2 class="text-2xl font-black text-slate-900 mb-4 uppercase tracking-tight">1. Data Collection & Purpose</h2>
-             <p>We collect only what is necessary to facilitate your partnership and comply with global financial regulations:</p>
-             <ul class="list-disc pl-6 space-y-2 mt-4 font-bold text-slate-700">
-                <li>KYC Information: National identification and tax residency details.</li>
-                <li>Financial Data: Payout destination accounts and transaction history.</li>
-                <li>Security Logs: IP addresses and device fingerprints to prevent unauthorized portal access.</li>
+             <h2 class="text-2xl font-black text-slate-900 mb-4 uppercase tracking-tight">1. Data Acquisition & Governance</h2>
+             <p>To facilitate a secure partnership and remain compliant with global financial standards, we collect the following datasets:</p>
+             <ul class="list-disc pl-6 space-y-3 mt-4 font-bold text-slate-700">
+                <li><span class="text-indigo-600">Identity Verification (KYC):</span> Government-issued identification, tax residency documents, and biometric verification data.</li>
+                <li><span class="text-indigo-600">Financial Instrumentation:</span> Payout destination accounts, transaction history, and capital commitment records.</li>
+                <li><span class="text-indigo-600">Digital Footprint:</span> IP addresses, device fingerprints, and geolocation data utilized exclusively for thwarting unauthorized portal access.</li>
              </ul>
           </div>
 
           <div>
-            <h2 class="text-2xl font-black text-slate-900 mb-4 uppercase tracking-tight">2. Use of Information</h2>
-            <p>Your data is strictly used for:</p>
-            <ul class="list-disc pl-6 space-y-2 mt-4">
-               <li>Processing trade cycle distributions and equity dividends.</li>
-               <li>Providing real-time performance analytics on your private Dashboard.</li>
-               <li>Complying with Anti-Money Laundering (AML) and Counter-Terrorism Financing (CTF) laws.</li>
+            <h2 class="text-2xl font-black text-slate-900 mb-4 uppercase tracking-tight">2. Strategic Information Utilization</h2>
+            <p>Your data is processed strictly for the following operational purposes:</p>
+            <ul class="list-disc pl-6 space-y-3 mt-4">
+               <li>Automating trade cycle distributions and calculating quarterly equity dividends.</li>
+               <li>Populating your private, real-time Performance Dashboard with high-fidelity analytics.</li>
+               <li>Meeting mandatory regulatory reporting requirements for Anti-Money Laundering (AML) and Counter-Terrorism Financing (CTF) laws.</li>
             </ul>
           </div>
 
           <div>
-            <h2 class="text-2xl font-black text-slate-900 mb-4 uppercase tracking-tight">3. Data Security & Sovereignty</h2>
-            <p>We use TLS 1.3 encryption for all data in transit and AES-256 for data at rest. Your sensitive documents are stored in isolated, encrypted buckets. We do not sell, rent, or trade your personal data with third-party marketing firms under any circumstances.</p>
+            <h2 class="text-2xl font-black text-slate-900 mb-4 uppercase tracking-tight">3. Sovereignty & Security Architecture</h2>
+            <p>WiseKings employs a "Security by Design" architecture. We utilize TLS 1.3 encryption for all data in motion and industry-leading AES-256 encryption for data at rest. Your document assets are stored in isolated, cryptographically hardened "cold-storage" buckets. We maintain a zero-tolerance policy against the selling or trading of partner data with third-party marketing entities.</p>
           </div>
 
-          <div class="p-8 bg-indigo-50 border border-indigo-100 rounded-3xl">
-             <h3 class="text-indigo-900 font-black mb-2 uppercase tracking-widest text-sm">International Data Transfers</h3>
-             <p class="text-indigo-700/80 text-sm">As a global platform, your data may be processed in multiple cloud regions. We ensure all regional processors adhere to GDPR and equivalent local data protection standards.</p>
+          <div class="p-8 bg-indigo-50 border border-indigo-100 rounded-3xl shadow-sm">
+             <h3 class="text-indigo-900 font-black mb-2 uppercase tracking-widest text-sm">Cross-Border Data Integrity</h3>
+             <p class="text-indigo-700/80 text-sm leading-relaxed">As a global enterprise, your data may be processed across multiple secure cloud regions. We ensure that all regional data processors adhere to the General Data Protection Regulation (GDPR) and equivalent local data protection frameworks to ensure consistent safety.</p>
           </div>
 
           <div>
-            <h2 class="text-2xl font-black text-slate-900 mb-4 uppercase tracking-tight">4. Your Rights</h2>
-            <p>You have the right to request a full transcript of your data, correct inaccuracies, or request account deletion (subject to the completion of active trade cycles and regulatory retention periods).</p>
+            <h2 class="text-2xl font-black text-slate-900 mb-4 uppercase tracking-tight">4. Your Data Stewardship Rights</h2>
+            <p>Partners retain ultimate control over their data. You have the right to request a full transcript of your data logs, rectify inaccuracies, or request account decommissioning. Please note that account deletion is subject to the resolution of active trade cycles and mandatory regulatory data retention durations (typically 5 to 7 years).</p>
           </div>
         </section>
 

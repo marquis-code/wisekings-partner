@@ -37,8 +37,22 @@
           </button>
         </div>
       </header>
-      <main class="flex-1 overflow-y-auto p-8 style-scrollbar">
-        <slot />
+      <main class="flex-1 overflow-y-auto p-8 style-scrollbar relative flex flex-col">
+        <div class="flex-1">
+          <slot />
+        </div>
+        
+        <!-- Footer Links -->
+        <footer class="mt-20 pt-10 border-t border-gray-100 flex flex-col md:flex-row items-center justify-between gap-6 pb-4">
+          <div class="flex items-center gap-6">
+            <NuxtLink to="/terms" class="text-[10px] font-black uppercase tracking-widest text-gray-400 hover:text-purple-600 transition-colors">Terms of Service</NuxtLink>
+            <NuxtLink to="/privacy" class="text-[10px] font-black uppercase tracking-widest text-gray-400 hover:text-purple-600 transition-colors">Privacy Policy</NuxtLink>
+            <NuxtLink to="/risk-disclosure" class="text-[10px] font-black uppercase tracking-widest text-gray-400 hover:text-purple-600 transition-colors">Risk Disclosure</NuxtLink>
+          </div>
+          <div class="text-[10px] font-black uppercase tracking-widest text-gray-300">
+            &copy; 2026 WiseKings Africa. All Rights Reserved.
+          </div>
+        </footer>
       </main>
     </div>
 

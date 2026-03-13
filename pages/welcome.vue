@@ -64,7 +64,7 @@
 
         <div class="relative group reveal transition-all duration-1000 delay-300 transform scale-95 opacity-0">
           <div class="aspect-square bg-slate-100 rounded-[3rem] overflow-hidden shadow-2xl relative border border-slate-200">
-            <img src="https://images.unsplash.com/photo-1557804506-669a67965ba0?q=80&w=2000&auto=format&fit=crop" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-1000" alt="Global Partnership" />
+            <img src="@/assets/images/hero2.jpg" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-1000" alt="Global Partnership" />
             
             <div class="absolute inset-0 bg-gradient-to-t from-slate-900/40 via-transparent to-transparent"></div>
 
@@ -244,9 +244,15 @@
         <div>
            <h5 class="text-xs font-black uppercase tracking-widest text-slate-500 mb-6 font-outfit">Connect With Us</h5>
            <div class="flex gap-4">
-             <div v-for="s in ['twitter', 'instagram', 'linkedin']" :key="s" class="w-8 h-8 rounded bg-white/5 flex items-center justify-center hover:bg-indigo-600 transition-all cursor-pointer">
-                <Icon :name="`lucide:${s}`" size="16" />
-             </div>
+             <a href="https://x.com/WisekingsS" target="_blank" class="w-8 h-8 rounded bg-white/5 flex items-center justify-center hover:bg-indigo-600 transition-all cursor-pointer">
+                <Icon name="lucide:twitter" size="16" />
+             </a>
+             <a href="https://www.instagram.com/wisekingsproducts/" target="_blank" class="w-8 h-8 rounded bg-white/5 flex items-center justify-center hover:bg-indigo-600 transition-all cursor-pointer">
+                <Icon name="lucide:instagram" size="16" />
+             </a>
+             <a href="https://web.facebook.com/profile.php?id=61583785186822" target="_blank" class="w-8 h-8 rounded bg-white/5 flex items-center justify-center hover:bg-indigo-600 transition-all cursor-pointer">
+                <Icon name="lucide:facebook" size="16" />
+             </a>
            </div>
            <p class="mt-8 text-[10px] font-bold text-slate-600 uppercase">Support: hello@wisekings.ng</p>
         </div>
@@ -265,6 +271,7 @@
 <script setup lang="ts">
 import { ref, onMounted } from 'vue'
 import { useScrollReveal } from '@/composables/core/useScrollReveal'
+import goal from "@/assets/images/goal.jpg"
 
 const scrolled = ref(false)
 const amount = ref(100000)
@@ -280,7 +287,7 @@ const steps = [
   { 
     title: 'Goal Setting', 
     desc: 'Pick your tier: Finance specific cycles or own long-term equity.',
-    image: 'https://images.unsplash.com/photo-1454165833767-151671e3a1d1?q=80&w=400&auto=format&fit=crop'
+    image: goal
   },
   { 
     title: 'Live Dashboard', 

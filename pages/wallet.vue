@@ -1,6 +1,5 @@
 <template>
   <div class="space-y-10 pb-20">
-    <definePageMeta :layout="'dashboard'" />
 
     <!-- Header -->
     <div class="flex flex-col md:flex-row md:items-end justify-between gap-6">

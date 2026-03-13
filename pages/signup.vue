@@ -79,7 +79,7 @@
           id="terms" 
           type="checkbox" 
           required
-          class="mt-1 w-4 h-4 rounded border-gray-300 text-orange-600 focus:ring-orange-500 cursor-pointer"
+          class="custom-checkbox"
         >
         <label for="terms" class="text-sm font-medium text-gray-600 cursor-pointer select-none leading-relaxed">
           I agree to the <NuxtLink to="/terms" class="text-orange-600 font-bold hover:underline">Terms of Service</NuxtLink> and <NuxtLink to="/privacy" class="text-orange-600 font-bold hover:underline">Privacy Policy</NuxtLink>.

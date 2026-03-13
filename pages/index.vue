@@ -1,6 +1,5 @@
 <template>
   <div class="space-y-10 pb-20">
-    <definePageMeta :layout="'dashboard'" />
 
     <!-- KYC Alert Banner -->
     <div v-if="profile?.kyc?.status !== 'approved' && profile?.kyc?.status !== 'pending'" 
@@ -104,7 +103,7 @@
           <div class="flex flex-col sm:flex-row gap-4">
             <div class="relative flex-1 group">
               <input :value="profile?.referralLink" readonly 
-                class="w-full bg-white/5 border border-white/10 rounded-2xl px-6 py-5 text-sm font-mono text-indigo-300 outline-none focus:border-indigo-500/50 transition-all font-mono" />
+                class="w-full bg-white/5 border border-white/10 rounded-2xl px-6 py-5 text-sm font-mono text-indigo-300 outline-none focus:border-indigo-500/50 transition-all" />
               <button @click="copy" class="absolute right-3 top-1/2 -translate-y-1/2 p-3 bg-white/10 hover:bg-white/20 rounded-xl transition-all text-white active:scale-90">
                 <Icon name="lucide:copy" class="w-5 h-5" />
               </button>

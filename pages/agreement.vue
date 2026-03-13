@@ -1,8 +1,5 @@
 <template>
   <div class="max-w-4xl mx-auto space-y-8">
-    <definePageMeta :layout="'dashboard'" />
-
-    <!-- Header -->
     <div>
       <h1 class="text-3xl font-bold text-gray-900 tracking-tight">Financing Agreement</h1>
       <p class="text-gray-500 text-sm mt-1 font-medium">Review and electronically sign your LPO Financing Agreement.</p>
@@ -98,6 +95,10 @@
 </template>
 
 <script setup lang="ts">
+definePageMeta({
+  layout: 'dashboard'
+})
+
 import { useFetchProfile } from '@/composables/modules/partners/useFetchProfile'
 import { useSignAgreement } from '@/composables/modules/partners/useSignAgreement'
 
@@ -115,7 +116,6 @@ const handleSign = async () => {
   
   const success = await signAgreement()
   if (success) {
-    // Scroll to top to see success message
     window.scrollTo({ top: 0, behavior: 'smooth' })
   }
 }

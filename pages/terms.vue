@@ -23,41 +23,42 @@
         <section class="prose prose-slate max-w-none space-y-12 text-slate-600 leading-relaxed">
           <div>
             <h2 class="text-2xl font-black text-slate-900 mb-4 uppercase tracking-tight">1. The Partnership Mandate</h2>
-            <p>By accessing the WiseKings Partner Portal and registering an account, you enter into a binding agreement with WiseKings Africa ("The Company"). This partnership is established to facilitate the growth of decentralized trade financing and equity participation in the consumer goods sector.</p>
+            <p>By accessing the WiseKings Partner Portal and registering an account, you enter into a binding agreement with WiseKings Africa ("The Company"). This partnership is established to facilitate the growth of decentralized trade financing and equity participation in the consumer goods sector. Partners are defined as independent participants who provide capital or marketing reach to scale the distribution of WiseKings branded snack products across regional and international markets.</p>
           </div>
 
           <div>
-             <h2 class="text-2xl font-black text-slate-900 mb-4 uppercase tracking-tight">2. Capital Commitment & Tiers</h2>
+             <h2 class="text-2xl font-black text-slate-900 mb-4 uppercase tracking-tight">2. Capital Commitment & Strategic Tiers</h2>
+             <p>Participation in the WiseKings ecosystem is categorized into strategic tiers, each with distinct risk-reward profiles and commitment durations:</p>
              <div class="grid grid-cols-1 md:grid-cols-2 gap-6 my-6">
-                <div class="p-6 bg-slate-50 rounded-2xl border border-slate-100">
-                   <h4 class="font-black text-slate-900 mb-2">Gold Tier (PO Financing)</h4>
-                   <p class="text-sm">Partners commit capital to specific commodity purchase orders. These cycles are fixed-term (60 days) and carry a pre-defined profit margin.</p>
+                <div class="p-6 bg-slate-50 rounded-2xl border border-slate-100 shadow-sm">
+                   <h4 class="font-black text-indigo-600 mb-2 uppercase tracking-widest text-xs">Gold Tier (LPO Financing)</h4>
+                   <p class="text-sm leading-relaxed text-slate-600">Partners commit capital to fund specific commodity purchase orders (LPOs). These cycles operate on a strict 60-day tenor. Investors receive a fixed flat return of 6.5% upon successful completion of the trade cycle and customer settlement.</p>
                 </div>
-                <div class="p-6 bg-slate-50 rounded-2xl border border-slate-100">
-                   <h4 class="font-black text-slate-900 mb-2">Diamond Tier (Equity)</h4>
-                   <p class="text-sm">Partners acquire fractional ownership of WiseKings expansion units. Rewards are distributed through quarterly dividends based on operational success.</p>
+                <div class="p-6 bg-slate-50 rounded-2xl border border-slate-100 shadow-sm">
+                   <h4 class="font-black text-indigo-600 mb-2 uppercase tracking-widest text-xs">Diamond Tier (Equity Participation)</h4>
+                   <p class="text-sm leading-relaxed text-slate-600">Partners acquire fractional ownership units of WiseKings expansion infrastructure. Rewards are distributed through quarterly dividends derived from net operational profits. This tier carries a long-term growth horizon (3-5 years).</p>
                 </div>
              </div>
           </div>
 
           <div>
-            <h2 class="text-2xl font-black text-slate-900 mb-4 uppercase tracking-tight">3. Profit Distribution Mechanics</h2>
-            <p>Profits are calculated based on the net margin of successful trade cycles. WiseKings guarantees transparency through the real-time Dashboard. Payouts are made to the internal Wallet and can be withdrawn to verified bank accounts subject to standard KYC/AML verification times (24-48 hours).</p>
+            <h2 class="text-2xl font-black text-slate-900 mb-4 uppercase tracking-tight">3. Profit Distribution & Settlement</h2>
+            <p>Profits are calculated based on the net margin of verified trade cycles. WiseKings guarantees absolute transparency through the cryptographically secured Partner Dashboard. Payouts are initially credited to the internal Partner Wallet and can be withdrawn to verified bank accounts. All withdrawals are subject to mandatory KYC/AML screening and typically clear within 24 to 48 business hours.</p>
           </div>
 
           <div>
             <h2 class="text-2xl font-black text-slate-900 mb-4 uppercase tracking-tight">4. Professional Ethics & Compliance</h2>
-            <p>Partners are strictly prohibited from misrepresenting the Company's brand, guaranteed returns (which are subject to market conditions in some tiers), or engaging in predatory marketing. Multi-account fraud or exploitation of referral bonuses will result in immediate account termination and forfeiture of pending commissions.</p>
+            <p>Partners must maintain the highest standards of professional integrity. Prohibited activities include, but are not limited to: misrepresenting the Company's brand, making unauthorized guarantees of returns beyond stated tiers, engagement in predatory marketing, or multi-account exploitation. Any breach of these ethical standards will result in immediate disqualification from the partner program and forfeiture of pending incentives.</p>
           </div>
 
           <div>
-             <h2 class="text-2xl font-black text-slate-900 mb-4 uppercase tracking-tight">5. Risk & Liability</h2>
-             <p>While WiseKings employs rigorous logistical and financial risk management, all business participation involves inherent risk. Partners acknowledge that they have read the <NuxtLink to="/risk-disclosure" class="text-indigo-600 font-bold underline">Risk Disclosure</NuxtLink> and are investing capital they can afford to lock for the specified cycle durations.</p>
+             <h2 class="text-2xl font-black text-slate-900 mb-4 uppercase tracking-tight">5. Risk Acknowledgment & Liability</h2>
+             <p>While WiseKings utilizes rigorous logistical auditing and financial risk-shielding, all business participation involves inherent market risks. Partners explicitly acknowledge that they have read and fully understood the <NuxtLink to="/risk-disclosure" class="text-indigo-600 font-bold underline decoration-2 underline-offset-4">Risk Disclosure</NuxtLink> statement and are committing capital that is within their individual risk tolerance thresholds.</p>
           </div>
 
           <div>
-             <h2 class="text-2xl font-black text-slate-900 mb-4 uppercase tracking-tight">6. Termination of Agreement</h2>
-             <p>Either party may terminate the partnership with 30 days notice. Upon termination, all active cycles must reach completion before final capital repatriation is processed.</p>
+             <h2 class="text-2xl font-black text-slate-900 mb-4 uppercase tracking-tight">6. Term & Termination</h2>
+             <p>This agreement remains in effect until terminated by either party. Termination requires a 30-day written notice. Upon notice of termination, all active capital commitments must reach their natural cycle conclusion before final capital repatriation is processed to the Partner's primary account.</p>
           </div>
         </section>
 
