@@ -7,7 +7,11 @@
         <h1 class="text-3xl font-black text-gray-900 tracking-tight">Financial Overview</h1>
         <p class="text-gray-500 font-medium mt-1">Manage your earnings, balance, and withdrawal requests.</p>
       </div>
-      <div class="flex items-center gap-2">
+      <div class="flex items-center gap-3">
+        <button @click="showFundModal = true" class="px-6 py-3 bg-indigo-600 text-white rounded-2xl font-black text-sm hover:bg-indigo-700 transition-all flex items-center gap-2 shadow-lg shadow-indigo-600/20">
+          <Icon name="lucide:plus" class="w-5 h-5" />
+          Fund Wallet
+        </button>
         <div class="px-4 py-2 bg-indigo-50 rounded-2xl border border-indigo-100 flex items-center gap-2">
            <div class="w-1.5 h-1.5 rounded-full bg-indigo-600 animate-pulse"></div>
            <span class="text-[10px] font-black text-indigo-700 uppercase tracking-widest">Real-time Balance</span>
@@ -154,21 +158,110 @@
         </div>
       </div>
     </div>
+
+    <!-- Funding Modal -->
+    <template v-if="showFundModal">
+      <div class="fixed inset-0 z-[100] flex items-center justify-center p-4">
+        <div class="absolute inset-0 bg-black/60 backdrop-blur-sm" @click="showFundModal = false"></div>
+        <div class="relative bg-white rounded-[2.5rem] w-full max-w-lg p-10 overflow-hidden shadow-2xl">
+          <div class="absolute top-0 right-0 w-64 h-64 bg-indigo-500/5 rounded-full translate-x-1/2 -translate-y-1/2 blur-3xl"></div>
+          
+          <div class="flex items-center justify-between mb-8">
+             <h2 class="text-2xl font-black text-gray-900 tracking-tight">Fund Account</h2>
+             <button @click="showFundModal = false" class="w-10 h-10 rounded-full bg-gray-50 flex items-center justify-center text-gray-400 hover:text-rose-500 transition-all">
+                <Icon name="lucide:x" size="20" />
+             </button>
+          </div>
+
+          <div class="space-y-6">
+            <div class="p-6 bg-gray-50 rounded-3xl border border-gray-100 space-y-4">
+               <div class="flex items-center justify-between">
+                  <p class="text-[10px] font-black text-gray-400 uppercase tracking-widest">Bank Name</p>
+                  <p class="text-xs font-black text-gray-900">{{ globalSettings?.partnerBankDetails?.bankName || '...' }}</p>
+               </div>
+               <div class="flex items-center justify-between">
+                  <p class="text-[10px] font-black text-gray-400 uppercase tracking-widest">Account Number</p>
+                  <p class="text-xs font-black text-gray-900 select-all">{{ globalSettings?.partnerBankDetails?.accountNumber || '...' }}</p>
+               </div>
+               <div class="flex items-center justify-between">
+                  <p class="text-[10px] font-black text-gray-400 uppercase tracking-widest">Account Name</p>
+                  <p class="text-xs font-black text-gray-900">{{ globalSettings?.partnerBankDetails?.accountName || '...' }}</p>
+               </div>
+            </div>
+
+            <div class="space-y-4">
+              <label class="text-[10px] font-black text-gray-400 uppercase tracking-widest px-1">Funding Amount (₦)</label>
+              <input v-model.number="fundForm.amount" type="number" class="w-full bg-gray-50 border border-transparent rounded-2xl px-6 py-4 text-sm font-bold text-gray-900 outline-none focus:ring-4 focus:ring-indigo-500/10 focus:bg-white transition-all" placeholder="Enter amount..." />
+            </div>
+
+            <div class="space-y-4">
+               <label class="text-[10px] font-black text-gray-400 uppercase tracking-widest px-1">Proof of Payment</label>
+               <div class="relative h-32 rounded-3xl border-2 border-dashed border-gray-100 flex flex-col items-center justify-center gap-2 cursor-pointer hover:border-indigo-500 transition-all group overflow-hidden" @click="triggerFileInput">
+                  <template v-if="!fundForm.proofUrl">
+                     <Icon :name="uploading ? 'lucide:loader-2' : 'lucide:camera'" :class="['w-6 h-6 text-gray-300', uploading ? 'animate-spin' : '']" />
+                     <p class="text-[10px] font-black text-gray-400 uppercase tracking-widest">{{ uploading ? 'Uploading...' : 'Upload Receipt' }}</p>
+                  </template>
+                  <template v-else>
+                     <img :src="fundForm.proofUrl" class="absolute inset-0 w-full h-full object-cover opacity-20" />
+                     <Icon name="lucide:check-circle" class="w-8 h-8 text-emerald-500" />
+                     <p class="text-[10px] font-black text-emerald-600 uppercase tracking-widest">Receipt Uploaded</p>
+                  </template>
+                  <input ref="fundFileInput" type="file" class="hidden" accept="image/*" @change="handleFileUpload" />
+               </div>
+            </div>
+
+            <button @click="handleFundAccount" class="w-full py-5 bg-indigo-600 text-white rounded-2xl font-black text-sm uppercase tracking-widest hover:bg-indigo-700 transition-all flex items-center justify-center gap-3 disabled:opacity-50" :disabled="funding || !fundForm.proofUrl || !fundForm.amount">
+               <Icon :name="funding ? 'lucide:loader-2' : 'lucide:check'" :class="['w-5 h-5', funding ? 'animate-spin' : '']" />
+               {{ funding ? 'Processing...' : 'Verify My Transfer' }}
+            </button>
+          </div>
+        </div>
+      </div>
+    </template>
   </div>
 </template>
 
 <script setup lang="ts">
+import { useAuthState } from '@/composables/useAuthState'
 import { useFetchWallet } from '@/composables/modules/wallets/useFetchWallet'
 import { useFetchWithdrawals } from '@/composables/modules/wallets/useFetchWithdrawals'
 import { useRequestWithdrawal } from '@/composables/modules/wallets/useRequestWithdrawal'
+import { useFundWallet } from '@/composables/modules/wallets/useFundWallet'
 import { useConfirm } from '@/composables/core/useConfirm'
+import { GATEWAY_ENDPOINT } from '@/api_factory/axios.config'
 
 definePageMeta({ layout: 'dashboard' })
 
 const { wallet, fetchWallet } = useFetchWallet()
 const { withdrawals, fetchWithdrawals } = useFetchWithdrawals()
 const { loading: submitting, requestWithdrawal: submitWithdrawal } = useRequestWithdrawal()
+const { loading: funding, fundWallet } = useFundWallet()
 const { openConfirm } = useConfirm()
+
+const { user } = useAuthState()
+
+const showFundModal = ref(false)
+const uploading = ref(false)
+const globalSettings = ref<any>(null)
+const fundForm = ref({ amount: 0, proofUrl: '' })
+const fundFileInput = ref<HTMLInputElement | null>(null)
+
+const whatsappNumber = ref('')
+
+function triggerFileInput() {
+  fundFileInput.value?.click()
+}
+
+function handleWhatsAppFunding(amount: number) {
+  const message = encodeURIComponent(
+    `*WALLET FUNDING REQUEST*\n\n` +
+    `*Partner:* ${user.value?.fullName || 'Partner'}\n` +
+    `*Amount:* ₦${amount.toLocaleString()}\n` +
+    `*Method:* DIRECT BANK TRANSFER\n\n` +
+    `Please verify my payment proof in the admin dashboard.`
+  )
+  window.open(`https://wa.me/${whatsappNumber.value}?text=${message}`, '_blank')
+}
 
 const form = ref({
   amount: 0,
@@ -200,6 +293,46 @@ async function handleFetchData() {
     fetchWallet(),
     fetchWithdrawals()
   ])
+
+  // Fetch settings for bank details
+  try {
+     const res = await GATEWAY_ENDPOINT.get('/settings') as any
+     const data = res.data || res.data?.data || res
+     globalSettings.value = data
+     whatsappNumber.value = data.whatsappNumber || ''
+  } catch (e) {
+     console.error('Failed to load settings', e)
+  }
+}
+
+async function handleFileUpload(event: any) {
+  const file = event.target.files[0]
+  if (!file) return
+
+  uploading.value = true
+  const formData = new FormData()
+  formData.append('file', file)
+
+  try {
+    const res = await GATEWAY_ENDPOINT.post('/uploads/image/payment_proofs', formData, {
+      headers: { 'Content-Type': 'multipart/form-data' }
+    }) as any
+    fundForm.value.proofUrl = res.data?.url || res.url
+  } catch (e) {
+    console.error('Upload failed', e)
+  } finally {
+    uploading.value = false
+  }
+}
+
+async function handleFundAccount() {
+   const success = await fundWallet(fundForm.value)
+   if (success) {
+      handleWhatsAppFunding(fundForm.value.amount)
+      showFundModal.value = false
+      fundForm.value = { amount: 0, proofUrl: '' }
+      handleFetchData()
+   }
 }
 
 onMounted(handleFetchData)

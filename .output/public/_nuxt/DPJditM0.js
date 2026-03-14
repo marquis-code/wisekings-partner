@@ -1,0 +1,1 @@
+import{e as o,c as s,K as t,o as n}from"./BfGYWjiM.js";const c={class:"h-screen w-screen bg-[#f0f2f5] flex flex-col overflow-hidden"},f=o({__name:"chat",setup(r){return(e,a)=>(n(),s("div",c,[t(e.$slots,"default")]))}});export{f as default};

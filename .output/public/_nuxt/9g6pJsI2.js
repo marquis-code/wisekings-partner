@@ -1,1 +1,0 @@
-import{_ as s,o as t,c,K as o}from"./DH-bmhjm.js";const r={},n={class:"min-h-screen bg-dark-950"};function a(e,_){return t(),c("div",n,[o(e.$slots,"default")])}const l=s(r,[["render",a]]);export{l as default};

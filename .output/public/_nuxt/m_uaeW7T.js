@@ -1,1 +1,0 @@
-import{f as t}from"./DH-bmhjm.js";const c=()=>{t(()=>{const o={threshold:.1,rootMargin:"0px 0px -50px 0px"},s=new IntersectionObserver(e=>{e.forEach(r=>{r.isIntersecting&&r.target.classList.add("reveal-visible")})},o);document.querySelectorAll(".reveal").forEach(e=>s.observe(e))})};export{c as u};
