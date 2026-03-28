@@ -45,13 +45,13 @@ export default defineNuxtConfig({
         },
     },
     googleFonts: {
-    families: {
-      "Inter": [400, 500, 600, 700],
-      "Poppins": [400, 500, 600, 700],
-      "Onest": [100, 200, 300, 400, 500, 600, 700, 800, 900],
+        families: {
+            "Inter": [400, 500, 600, 700],
+            "Poppins": [400, 500, 600, 700],
+            "Onest": [100, 200, 300, 400, 500, 600, 700, 800, 900],
+        },
+        display: "swap",
+        preload: true,
     },
-    display: "swap",
-    preload: true,
-  },
-  css: ['/assets/font/stylesheet.css', "/assets/css/main.css"],
+    css: ['/assets/font/stylesheet.css', "/assets/css/main.css"],
 })
